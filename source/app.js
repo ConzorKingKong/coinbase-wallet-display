@@ -12,7 +12,11 @@
     element = INSTALL.createElement(options.location, element)
 
     // Set the app attribute to your app's dash-delimited alias.
-    element.setAttribute('app', 'example')
+    element.setAttribute('app', 'coinbase-wallet-display')
+    
+    if (options.bitcoin) {
+      element.innerText = "BTC: " + options.bitcoin
+    }
   }
 
   // INSTALL_SCOPE is an object that is used to handle option changes without refreshing the page.
